@@ -190,7 +190,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   const ClanMember(
                       name: 'Lorem ipsum - Debating Sensei',
                       image: 'images/profile.png'),
-                  CustomDivider(context: context),
                 ],
               ),
             ),
