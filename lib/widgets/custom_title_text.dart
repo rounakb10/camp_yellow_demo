@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
+import '../constants.dart' as constants;
+
 class CustomTitleText extends StatelessWidget {
   const CustomTitleText({
     Key? key,
-    required this.customYellow,
     required this.text,
   }) : super(key: key);
 
-  final Color customYellow;
+  final Color customYellow = constants.customYellow;
   final String text;
 
   @override

@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
+import '../constants.dart' as constants;
+
 class ClanMember extends StatelessWidget {
   const ClanMember({
     Key? key,
     required this.image,
     required this.name,
   }) : super(key: key);
+  final Color customPink = constants.customPink;
   final String image;
   final String name;
 
@@ -25,10 +28,10 @@ class ClanMember extends StatelessWidget {
           const SizedBox(width: 20),
           Text(
             name,
-            style: const TextStyle(
+            style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 16,
-              color: Color(0xffd22b66),
+              color: customPink,
             ),
           )
         ],

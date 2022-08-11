@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
+import '../constants.dart' as constants;
+
 class ClanDiscussion extends StatelessWidget {
   const ClanDiscussion({
     Key? key,
-    required this.customPink,
     required this.text1,
     required this.text2,
   }) : super(key: key);
 
-  final Color customPink;
+  final Color customPink = constants.customPink;
   final String text1;
   final String text2;
 

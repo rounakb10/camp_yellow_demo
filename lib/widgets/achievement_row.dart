@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
+import '../constants.dart' as constants;
+
 class AchievementRow extends StatelessWidget {
   const AchievementRow({
     Key? key,
-    required this.customPink,
-    required this.customYellow,
     required this.context,
     required this.text,
     required this.text2,
     required this.width,
   }) : super(key: key);
 
-  final Color customPink;
-  final Color customYellow;
+  final Color customPink = constants.customPink;
+  final Color customYellow = constants.customYellow;
   final BuildContext context;
   final String text;
   final String text2;

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
+import '../constants.dart' as constants;
+
 class SeeMore extends StatelessWidget {
   const SeeMore({
     Key? key,
-    required this.customYellow,
   }) : super(key: key);
 
-  final Color customYellow;
+  final Color customYellow = constants.customYellow;
 
   @override
   Widget build(BuildContext context) {

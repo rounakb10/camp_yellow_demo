@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'constants.dart' as constants;
 import 'widgets/achievement_row.dart';
 import 'widgets/clan_discussion.dart';
 import 'widgets/clan_member.dart';
@@ -16,9 +17,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  Color customYellow = const Color(0xffe8ba4a);
-  Color customPink = const Color(0xffd22b66);
-
+  final Color customYellow = constants.customYellow;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,14 +93,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CustomDivider(context: context),
-                  CustomTitleText(
-                      customYellow: customYellow, text: 'Achievements'),
+                  const CustomTitleText(text: 'Achievements'),
                   Row(
                     children: [
-                      Text(
+                      const Text(
                         "Current League",
                         style: TextStyle(
-                          color: customPink,
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold,
                         ),
@@ -116,32 +113,24 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   const SizedBox(height: 25),
                   AchievementRow(
-                      customPink: customPink,
-                      customYellow: customYellow,
                       context: context,
                       text: "League Ranking",
                       text2: "11th",
                       width: MediaQuery.of(context).size.width * 0.15),
                   const SizedBox(height: 40),
                   AchievementRow(
-                      customPink: customPink,
-                      customYellow: customYellow,
                       context: context,
                       text: "Experience",
                       text2: "2000 xp",
                       width: MediaQuery.of(context).size.width * 0.26),
                   const SizedBox(height: 40),
                   AchievementRow(
-                      customPink: customPink,
-                      customYellow: customYellow,
                       context: context,
                       text: "# of wins",
                       text2: "3",
                       width: MediaQuery.of(context).size.width * 0.305),
                   CustomDivider(context: context),
-                  CustomTitleText(
-                      customYellow: customYellow,
-                      text: 'Past featured performances'),
+                  const CustomTitleText(text: 'Past featured performances'),
                   PastPerformance(
                       context: context,
                       text: 'Priya in International\nDebating League',
@@ -151,10 +140,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       context: context,
                       text: 'Akshay in Global\nQuizzing Finals',
                       image: 'images/past_performances.png'),
-                  SeeMore(customYellow: customYellow),
+                  const SeeMore(),
                   CustomDivider(context: context),
-                  CustomTitleText(
-                      customYellow: customYellow,
+                  const CustomTitleText(
                       text: 'Live clan activities on platform'),
                   LiveActivity(
                       context: context,
@@ -164,26 +152,20 @@ class _HomeScreenState extends State<HomeScreen> {
                       context: context,
                       text: 'Treasure hunt',
                       image: 'images/clan_activity.jpg'),
-                  SeeMore(customYellow: customYellow),
+                  const SeeMore(),
                   CustomDivider(context: context),
-                  CustomTitleText(
-                      customYellow: customYellow, text: 'Clan discussions'),
-                  ClanDiscussion(
-                      customPink: customPink,
-                      text1: 'General thread:',
-                      text2: '15 unread messages'),
-                  ClanDiscussion(
-                      customPink: customPink,
+                  const CustomTitleText(text: 'Clan discussions'),
+                  const ClanDiscussion(
+                      text1: 'General thread:', text2: '15 unread messages'),
+                  const ClanDiscussion(
                       text1: '(live) Anyone enthu for trading league...',
                       text2: '10 unread messages'),
-                  ClanDiscussion(
-                      customPink: customPink,
+                  const ClanDiscussion(
                       text1: '(live) Anyone enthu for trading league...',
                       text2: '10 unread messages'),
-                  SeeMore(customYellow: customYellow),
+                  const SeeMore(),
                   CustomDivider(context: context),
-                  CustomTitleText(
-                      customYellow: customYellow, text: 'Clan members'),
+                  const CustomTitleText(text: 'Clan members'),
                   const ClanMember(
                       name: 'Lorem ipsum - Clan head',
                       image: 'images/profile.png'),
